@@ -1,9 +1,13 @@
 button {
     background-color: rgb(70, 70, 70);
     border-radius: 4px;
+    margin-top: 1em;
     color: white;
     font-size: 2em;
     transition: 1s;
+}
+button:first-child {
+    margin-top: 0;
 }
 button:hover {
     cursor: pointer;
