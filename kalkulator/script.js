@@ -7,31 +7,28 @@ function kalkul(massive) {
         for (var i = 0; i < massive.length; i++) {
             res += massive[i];
         }
-        return res;
+        console.log('Результат вычисления: ' + res);
     }
     else if (znach == '-') {
         for (var i = 1; i < massive.length; i++) {
             res -= massive[i];
         }
-        return res;
+        console.log('Результат вычисления: ' + res);
     }
     else if (znach == '*') {
         for (var i = 1; i < massive.length; i++) {
             res *= massive[i];
         }
-        return res;
+        console.log('Результат вычисления: ' + res);
     }
     else if (znach == '/') {
         for (var i = 1; i < massive.length; i++) {
             res /= massive[i];
         }
-        return res;
+        console.log('Результат вычисления: ' + res);
     }
     else {
         res = 'пользователь ничего не хочет делать!';
-        return res;
+        console.warn('Результат вычисления: ' + res);
     }
 }
-
-var result = kalkul(numbers);
-document.write('Результат: ' + result)

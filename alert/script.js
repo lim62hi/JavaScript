@@ -1,16 +1,15 @@
-var text = prompt('alert, confirm or prompt?');
-
-function okna (message) {
-    if (message == 'alert') {
+function okna () {
+    var message = prompt('alert, confirm or prompt?');
+    if (message == 'alert' ) {
         alert('При нажатии на кпопку, вы должны заплатить 100 рублей!');
     }
-    else if (message == 'confirm') {
+    else if (message == 'confirm' || message == '') {
         var znach = confirm('Вы согласны?');
         if (znach) {
             console.log('Пользователь согласен заплатить 100 рублей!');
         }
         else {
-            console.log('Пользователь не будет платить 100 рублей!');
+            console.warn('Пользователь не будет платить 100 рублей!');
         }
     }
     else if (message == 'prompt') {
@@ -19,7 +18,7 @@ function okna (message) {
             console.log('Пользователь согласен заплатить 100 рублей!');
         }
         else if (znach == 'нет') {
-            console.log('Пользователь не будет платить 100 рублей!');
+            console.warn('Пользователь не будет платить 100 рублей!');
         }
         else {
             alert('Вы адекватный? Напишите что-то нормальное!');
@@ -30,7 +29,7 @@ function okna (message) {
                     break;
                 }
                 else if (znach == 'нет') {
-                    console.log('Пользователь не будет платить 100 рублей!');
+                    console.warn('Пользователь не будет платить 100 рублей!');
                     break;
                 }
                 else {
@@ -40,5 +39,3 @@ function okna (message) {
         }
     }
 }
-
-okna(text);
